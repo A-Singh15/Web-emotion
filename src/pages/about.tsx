@@ -25,6 +25,17 @@ const authors = [
     interests:
       "Deep Learning, Reinforcement Learning, High-Performance Computing, AI-driven System Architecture",
   },
+   {
+    name: "Ratish ",
+   image: "https://via.placeholder.com/150", // 🟡 placeholder image
+    color: "primary",
+    role: " Graduate Research Assistant",
+    focus:
+      "verfication.",
+    programming: "",
+    interests:
+      " AI-driven System Architecture",
+  },
 ];
 
 export default function ProjectBreakdown() {
