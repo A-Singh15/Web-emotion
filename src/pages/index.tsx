@@ -25,6 +25,7 @@ export default function IndexPage() {
     document.body.appendChild(script);
   }, []);
 
+  // @ts-ignore
   return (
     <DefaultLayout>
       {/* Background Spline Viewer */}
@@ -46,22 +47,18 @@ export default function IndexPage() {
 
         <div className="flex gap-3">
           <Link className={buttonStyles({ color: "primary", radius: "full", variant: "shadow" })} href="/jetson">
-            Jetson Mode
+            With Jetson AI
           </Link>
-          <Link className={buttonStyles({ color: "secondary", radius: "full", variant: "shadow" })} href="/src/pages/Live">
-            Browser Mode
+          <Link className={buttonStyles({ color: "secondary", radius: "full", variant: "shadow" })} href="/without-jetson">
+            Without Jetson AI
           </Link>
           <Link className={buttonStyles({ color: "warning", variant: "shadow", radius: "full" })} href="/realtimedetect">
-            Detect Emotions
+            Real-Time Detection
           </Link>
           <Link className={buttonStyles({ color: "success", radius: "full", variant: "shadow" })} href="/attention">
-            Focus Tracker
-          </Link>
-          <Link className={buttonStyles({ color: "primary", radius: "full", variant: "shadow" })} href="/aurora">
-            Aurora
+            Attention Span
           </Link>
         </div>
-
       </section>
     </DefaultLayout>
   );
