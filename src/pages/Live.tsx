@@ -20,6 +20,7 @@ export default function RealtimeEmotion() {
           <h2 className="text-xl font-semibold text-center">Live Webcam Feed</h2>
           <div className="relative flex justify-center items-center w-full">
             {isStreaming && (
+              // eslint-disable-next-line jsx-a11y/iframe-has-title
               <iframe
                 src="https://vladmandic.github.io/human/demo/typescript/index.html"
                 className="w-full h-[1000px] border rounded-xl shadow-md"
@@ -27,6 +28,7 @@ export default function RealtimeEmotion() {
                 allowFullScreen
               />
             )}
+
           </div>
           <Button
             color="primary"

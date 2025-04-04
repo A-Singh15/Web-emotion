@@ -11,7 +11,7 @@ export const siteConfig = {
     { label: " Browser Mode", href: "/Live" },
     { label: "Detect Emotions", href: "/realtimedetect" },
     { label: "Focus Tracker", href: "/attention" },
-    { label: "About Us", href: "/Aurora" },
+    { label: "About Us", href: "/about" },
     { label: "Aurora", href: "/Aurora" },
 
 

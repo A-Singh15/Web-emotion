@@ -1,5 +1,7 @@
 import { Navbar } from "@/components/navbar";
 import { Link } from "@heroui/link";
+import '@/styles/globals.css'
+import '../styles/globals.css' // if you're one level down
 
 export default function DefaultLayout({
                                         children,
