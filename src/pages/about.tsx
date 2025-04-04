@@ -6,8 +6,7 @@ import { motion } from "framer-motion";
 const authors = [
   {
     name: "Aaron ",
-    image: "src/images/aaron.png",
-    color: "primary",
+    image: "/images/aaron.png", // ✅ path from public    color: "primary",
     role: " Graduate Research Assistant",
     focus:
       "Built the core architecture of the multimodal emotion recognition system, including data collection pipelines, facial and audio emotion classification models, and real-time inference framework.",
@@ -17,7 +16,7 @@ const authors = [
   },
   {
     name: "Bisum ",
-    image: "src/images/bisum.png",
+    image: "/images/Bisum.png", // ✅ path from public
     color: "secondary",
     role: " Graduate Research Assistant",
     focus:
