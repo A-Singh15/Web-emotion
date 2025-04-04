@@ -1,43 +1,70 @@
 import DefaultLayout from "@/layouts/default";
 import { Card } from "@heroui/card";
-import { Avatar } from "@heroui/avatar";
 import { title, subtitle } from "@/components/primitives";
 import { motion } from "framer-motion";
 
 const authors = [
-  { name: "Aaron", image: "/images/placeholder.png", color: "primary" },
+  {
+    name: "Aaron ",
+    image: "src/images/aaron.png",
+    color: "primary",
+    role: " Graduate Research Assistant",
+    focus:
+      "Built the core architecture of the multimodal emotion recognition system, including data collection pipelines, facial and audio emotion classification models, and real-time inference framework.",
+    programming: "Python, C++, MATLAB, TensorFlow, PyTorch",
+    interests:
+      "Deep Learning, Reinforcement Learning, High-Performance Computing, AI-driven System Architecture",
+  },
+  {
+    name: "Bisum ",
+    image: "src/images/bisum.png",
+    color: "secondary",
+    role: " Graduate Research Assistant",
+    focus:
+      "Assisted in training, testing, and validating the AI/ML models, and contributed to integration and testing of system components.",
+    programming: "Python, C++, MATLAB, TensorFlow, PyTorch",
+    interests:
+      "Deep Learning, Reinforcement Learning, High-Performance Computing, AI-driven System Architecture",
+  },
 ];
 
 export default function ProjectBreakdown() {
-  // @ts-ignore
-  // @ts-ignore
-  // @ts-ignore
   return (
     <DefaultLayout>
-      <section className="flex flex-col items-center justify-center gap-8 py-10 md:py-12">
+      <section className="flex flex-col items-center justify-center gap-12 py-16 md:py-20">
         {/* 🔥 Authors Section */}
         <div className="text-center">
-          <h1 className={title({ class: undefined, className: undefined, fullWidth: undefined, size: undefined, color: "cyan" })}>Project Breakdown</h1>
+          <h1
+            className={title({
+              color: "cyan",
+            })}
+          >
+            Project Breakdown
+          </h1>
           <p className={subtitle({ class: "mt-2" })}>
             A collaborative effort to build a real-time multimodal emotion recognition system.
           </p>
 
-          <div className="flex flex-wrap justify-center gap-8 mt-6">
+          <div className="flex flex-wrap justify-center gap-16 mt-10">
             {authors.map((author, idx) => (
               <motion.div
                 key={idx}
-                whileHover={{ scale: 1.1 }}
+                whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
-                className="flex flex-col items-center"
+                className="flex flex-col items-center max-w-md text-center"
               >
-                <Avatar
+                <img
                   src={author.image}
                   alt={author.name}
-                  size="lg"
-                  color={"primary"}
-                  className="border-4 border-current shadow-lg"
+                  className="w-60 h-60 rounded-xl border-4 border-current shadow-xl object-cover"
                 />
-                <p className="mt-2 text-lg font-semibold text-default-800">{author.name}</p>
+                <p className="mt-4 text-xl font-bold text-default-800">{author.name}</p>
+                <p className="text-base font-semibold text-primary italic">{author.role}</p>
+                <div className="mt-3 text-sm text-left">
+                  <p><strong className="text-secondary">Contributions:</strong> <span className="text-default-600">{author.focus}</span></p>
+                  <p><strong className="text-success">Programming:</strong> <span className="text-default-600">{author.programming}</span></p>
+                  <p><strong className="text-warning">Research Interests:</strong> <span className="text-default-600">{author.interests}</span></p>
+                </div>
               </motion.div>
             ))}
           </div>

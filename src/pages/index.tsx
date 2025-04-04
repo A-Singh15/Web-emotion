@@ -30,7 +30,6 @@ export default function IndexPage() {
         <spline-viewer url="https://prod.spline.design/6FvHj30hveMkrNtg/scene.splinecode" />
       </div>
 
-      {/* Main Content */}
       <section className="relative flex flex-col items-center justify-center gap-6 py-20 text-white z-10">
         <div className="text-center max-w-2xl">
           <h1 className={title()}>
@@ -41,7 +40,7 @@ export default function IndexPage() {
           </p>
         </div>
 
-        {/* Action Buttons */}
+        {/* Main Feature Buttons */}
         <div className="flex flex-wrap gap-4 justify-center mt-6">
           <Link className={buttonStyles({ color: "primary", radius: "full", variant: "shadow" })} href="/jetson">
             Without Jetson AI
@@ -57,16 +56,17 @@ export default function IndexPage() {
           </Link>
         </div>
 
-        {/* Chat Button */}
-        <div className="mt-8">
-          <Link
-            className={buttonStyles({ color: "violet", radius: "full", variant: "shadow" })}
-            href="/chat"
-          >
-            💬 Chat with AURORA
-          </Link>
-        </div>
+        {/* Invisible Click Area Below Buttons */}
+        <Link
+          href="/aurora"
+          className="mt-10 h-24 w-full max-w-sm rounded-lg cursor-pointer"
+          aria-label="Hidden area to chat with AURORA"
+        >
+          {/* Optional visual hint or glow (invisible to users if you want it truly blank) */}
+          <div className="w-full h-full" />
+        </Link>
       </section>
+
     </DefaultLayout>
   );
 }
