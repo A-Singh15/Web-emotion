@@ -19,7 +19,7 @@ export default function DefaultLayout({
       <footer className="w-full bg-gray-900 text-gray-400 py-4 text-sm">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-6">
           {/* Left side */}
-          <p>&copy; {new Date().getFullYear()} Emotion AI. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} AURORA⁺ All rights reserved.</p>
 
           {/* Right side */}
           <div className="flex space-x-4">

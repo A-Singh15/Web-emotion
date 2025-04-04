@@ -33,7 +33,7 @@ export default function IndexPage() {
       <section className="relative flex flex-col items-center justify-center gap-6 py-20 text-white z-10">
         <div className="text-center max-w-2xl">
           <h1 className={title()}>
-            Welcome to <span className={title({ color: "violet" })}>AURORA</span>
+            Welcome to <span className={title({ color: "violet" })}>AURORA⁺</span>
           </h1>
           <p className={subtitle({ class: "mt-4" })}>
             Experience real-time emotion recognition using cutting-edge AI technology.
