@@ -40,8 +40,8 @@ export default function IndexPage() {
           </p>
         </div>
 
-        {/* Main Feature Buttons */}
-        <div className="flex flex-wrap gap-4 justify-center mt-6">
+        {/* Main Feature Buttons - lowered below blob */}
+        <div className="mt-70 flex flex-wrap gap-6 justify-center">
           <Link className={buttonStyles({ color: "primary", radius: "full", variant: "shadow" })} href="/jetson">
             Without Jetson AI
           </Link>
@@ -62,11 +62,12 @@ export default function IndexPage() {
           className="mt-10 h-24 w-full max-w-sm rounded-lg cursor-pointer"
           aria-label="Hidden area to chat with AURORA"
         >
-          {/* Optional visual hint or glow (invisible to users if you want it truly blank) */}
           <div className="w-full h-full" />
         </Link>
-      </section>
 
+        {/* Additional spacing before footer */}
+        <div className="h-32 md:h-48" />
+      </section>
     </DefaultLayout>
   );
 }
