@@ -37,7 +37,7 @@ const authors: Author[] = [
   },
   {
     name: "Ratish",
-    image: "/images/ratish.png",
+    image: "https://i.ibb.co/4gPgnjHT/as.png",
     color: "primary",
     role: "Graduate Research Assistant",
     focus: "Verification and testing.",
