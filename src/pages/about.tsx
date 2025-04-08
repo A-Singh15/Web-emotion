@@ -46,25 +46,90 @@ const authors: Author[] = [
   },
 ];
 
+const professors: Author[] = [
+  {
+    name: "Dr. Sanchita Ghose",
+    image: "https://i.ibb.co/5g9Gg09D/ghose.png",
+    color: "success",
+    role: "Assistant Professor, AI-LAMP Director",
+    focus:
+      "Leads research in multimodal learning and AI for human-computer interaction. Expert in deep learning for sound synthesis, video processing, and cross-modal retrieval.",
+    programming: "Python, MATLAB, AI Toolkits",
+    interests: "Multimodal Perception, Deep Learning, Cross-modal AI",
+  },
+  {
+    name: "Dr. Hamid Mahmoodi",
+    image: "https://necrl.github.io/NECRL/design/Hamid_1x1.jpg",
+    color: "warning",
+    role: "Professor & Graduate Program Coordinator NeCRL",
+    focus:
+      "Focuses on VLSI design, low-power high-performance circuits, and nanoelectronics. Drives innovation in semiconductor systems and mentoring students.",
+    programming: "Hardware Design, Circuit Modeling",
+    interests: "VLSI, Nanoelectronics, Semiconductor Systems",
+  },
+];
 export default function ProjectShowcase() {
   const [selectedAuthor, setSelectedAuthor] = useState<Author | null>(null);
 
   return (
     <DefaultLayout>
-      <section className="flex flex-col items-center justify-center gap-12 py-16 md:py-20">
-        {/* About Us Header */}
-        <div className="text-center space-y-3">
-          <h1 className={title({ color: "cyan" })}>Meet the Team</h1>
-          <p className={subtitle({ class: "max-w-2xl mx-auto" })}>
-            We are a passionate group of engineers and researchers dedicated to creating emotionally intelligent technology that empowers deeper connection.
-          </p>
-          <p className="italic text-lg text-default-500 dark:text-gray-300 font-medium">
-            "Ascend Beyond Reality"
-          </p>
+      <section className="flex flex-col items-center justify-center gap-10 py-8 md:py-12">
+        {/* Professors on far left and right, title in center */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl w-full items-center">
+          {/* Professor Left */}
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+            className="flex flex-col items-center text-center cursor-pointer"
+            onClick={() => setSelectedAuthor(professors[0])}
+          >
+            <img
+              src={professors[0].image}
+              alt={professors[0].name}
+              className="w-48 h-48 rounded-xl border-4 border-current shadow-xl object-cover"
+            />
+            <p className="mt-3 text-lg font-bold">{professors[0].name}</p>
+            <p className="text-sm text-default-600 font-medium tracking-wide mt-1">
+              {professors[0].role}
+            </p>
+            <button className="mt-1 text-xs underline">View More</button>
+          </motion.div>
+
+          {/* Title Center */}
+          <div className="text-center space-y-3 col-span-1">
+            <h1 className={title({ color: "cyan" })}>Meet the Team</h1>
+            <p className={subtitle({ class: "max-w-2xl mx-auto" })}>
+              We are a passionate group of engineers and researchers dedicated
+              to creating emotionally intelligent technology that empowers deeper
+              connection.
+            </p>
+            <p className="italic text-lg text-default-500 dark:text-gray-300 font-medium">
+              "Ascend Beyond Reality"
+            </p>
+          </div>
+
+          {/* Professor Right */}
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+            className="flex flex-col items-center text-center cursor-pointer"
+            onClick={() => setSelectedAuthor(professors[1])}
+          >
+            <img
+              src={professors[1].image}
+              alt={professors[1].name}
+              className="w-48 h-48 rounded-xl border-4 border-current shadow-xl object-cover"
+            />
+            <p className="mt-3 text-lg font-bold">{professors[1].name}</p>
+            <p className="text-sm text-default-600 font-medium tracking-wide mt-1">
+              {professors[1].role}
+            </p>
+            <button className="mt-1 text-xs underline">View More</button>
+          </motion.div>
         </div>
 
-        {/* Author Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl w-full">
+        {/* Team Members Section (moved up) */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl w-full mt-6">
           {authors.map((author, idx) => (
             <motion.div
               key={idx}
@@ -79,12 +144,10 @@ export default function ProjectShowcase() {
                 className="w-56 h-56 rounded-xl border-4 border-current shadow-xl object-cover"
               />
               <p className="mt-4 text-xl font-bold">{author.name}</p>
-              <p className="text-base text-default-600 caret-amber-600 font-medium tracking-wide mt-1">
+              <p className="text-base text-default-600 font-medium tracking-wide mt-1">
                 {author.role}
               </p>
-              <button className="mt-2 text-sm underline caret-amber-600">
-                View More
-              </button>
+              <button className="mt-2 text-sm underline">View More</button>
             </motion.div>
           ))}
         </div>
@@ -122,7 +185,7 @@ export default function ProjectShowcase() {
                 </p>
                 <button
                   onClick={() => setSelectedAuthor(null)}
-                  className="mt-4 px-4 py-2 ring-offset-pink-800 text-white rounded"
+                  className="mt-4 px-4 py-2 bg-primary text-white rounded"
                 >
                   Close
                 </button>
@@ -137,7 +200,8 @@ export default function ProjectShowcase() {
             <Card className="p-6 border-l-4 border-primary shadow-md">
               <h2 className="text-xl font-semibold text-primary">Vision</h2>
               <p className="mt-2 text-default-700">
-                Designing systems that understand and respond to human emotions—bridging technology and empathy in real time.
+                Designing systems that understand and respond to human
+                emotions—bridging technology and empathy in real time.
               </p>
             </Card>
           </motion.div>
@@ -168,9 +232,13 @@ export default function ProjectShowcase() {
 
           <motion.div whileHover={{ scale: 1.02 }} transition={{ duration: 0.3 }}>
             <Card className="p-6 border-l-4 border-warning shadow-md">
-              <h2 className="text-xl font-semibold text-warning">Architecture Overview</h2>
+              <h2 className="text-xl font-semibold text-warning">
+                Architecture Overview
+              </h2>
               <p className="mt-2 text-default-700">
-                Powered by Flask for real-time backend performance, React for a dynamic user interface, and WebSockets for smooth, live communication.
+                Powered by Flask for real-time backend performance, React for a
+                dynamic user interface, and WebSockets for smooth, live
+                communication.
               </p>
             </Card>
           </motion.div>
