@@ -40,7 +40,7 @@ export const Navbar = () => {
   );
 
   return (
-    <HeroUINavbar maxWidth="xl" position="sticky">
+    <HeroUINavbar maxWidth="full" className="px-6 md:px-12 lg:px-20 2xl:px-32" position="sticky">
       {/* Left - Logo and Desktop Nav */}
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand className="gap-3 max-w-fit">
