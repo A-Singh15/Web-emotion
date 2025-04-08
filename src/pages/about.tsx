@@ -98,13 +98,12 @@ export default function ProjectShowcase() {
           {/* Title Center */}
           <div className="text-center space-y-3 col-span-1">
             <h1 className={title({ color: "cyan" })}>Meet the Team</h1>
-            <p className={subtitle({ class: "max-w-2xl mx-auto" })}>
-              We are a passionate group of engineers and researchers dedicated
-              to creating emotionally intelligent technology that empowers deeper
-              connection.
+            <p className={subtitle({ class: "max-w-md mx-auto" })}>
+              A research collaboration between AI-LAMP and NeCRL, focused on AI/ML, LLMs, HPC, embedded systems, and nanoelectronics.
             </p>
+
             <p className="italic text-lg text-default-500 dark:text-gray-300 font-medium">
-              "Ascend Beyond Reality"
+              &#34;Ascend Beyond Reality&#34;
             </p>
           </div>
 
