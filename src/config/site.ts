@@ -7,7 +7,7 @@ export const siteConfig = {
   // 🔹 Main Navigation Bar Items
   navItems: [
     { label: "Home", href: "/" },
-    { label: "Jetson Mode", href: "/Jetson" },
+   // { label: "Jetson Mode", href: "/Jetson" },
     { label: " Browser Mode", href: "/Live" },
     { label: "Detect Emotions", href: "/realtimedetect" },
     { label: "Focus Tracker", href: "/attention" },
@@ -20,7 +20,7 @@ export const siteConfig = {
   // 🔹 Mobile & Sidebar Menu Items
   navMenuItems: [
     { label: "Home", href: "/" },
-    { label: "Jetson Mode", href: "/Jetson" },
+   //  { label: "Jetson Mode", href: "/Jetson" },
     { label: " Browser Mode", href: "/Live" },
     { label: "Detect Emotions", href: "/realtimedetect" },
     { label: "Focus Tracker", href: "/attention" },
