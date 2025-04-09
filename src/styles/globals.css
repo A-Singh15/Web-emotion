@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Hide Spline watermark */
+spline-viewer::part(branding) {
+    display: none !important;
+}

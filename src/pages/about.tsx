@@ -73,6 +73,8 @@ export default function ProjectShowcase() {
 
   return (
       <DefaultLayout>
+        <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[100vw] h-[100vw] bg-violet-600/10 blur-[120px] rounded-full z-0" />
+
         <section className="flex flex-col items-center justify-center gap-10 py-8 md:py-12">
           {/* Professors on far left and right, title in center */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl w-full items-center">
