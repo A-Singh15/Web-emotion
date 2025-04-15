@@ -31,6 +31,6 @@ export const siteConfig = {
 
   // 🔹 External Links
   links: {
-    github: "https://github.com/A-Singh15",
+    github: "https://github.com/Audio-Visual-Emotion-Recognition-System",
   },
 };
