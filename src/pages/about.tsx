@@ -18,7 +18,7 @@ type Author = {
 const authors: Author[] = [
   {
     name: "Aaron",
-    image: "https://i.ibb.co/1YKtKJRM/Screenshot-2025-04-08-at-2-15-53-PM-removebg-preview-1.png",
+    image: "https://i.ibb.co/8L6ghHjv/aaron.png",
     color: "primary",
     role: "Graduate Research Assistant",
     focus:
@@ -28,7 +28,7 @@ const authors: Author[] = [
   },
   {
     name: "Bisum",
-    image: "/images/Bisum.png",
+    image: "https://i.ibb.co/NdhDnpyy/b.png",
     color: "secondary",
     role: "Graduate Research Assistant",
     focus: "Contributed to AI/ML model training and integration.",
@@ -37,7 +37,7 @@ const authors: Author[] = [
   },
   {
     name: "Ratish",
-    image: "https://i.ibb.co/4gPgnjHT/as.png",
+    image: "https://www.treasury.gov.ph/wp-content/uploads/2022/01/male-placeholder-image.jpeg",
     color: "primary",
     role: "Graduate Research Assistant",
     focus: "Verification and testing.",
@@ -105,9 +105,7 @@ export default function ProjectShowcase() {
                 A research collaboration between AI-LAMP and NeCRL, focused on AI/ML, LLMs, HPC, embedded systems, and nanoelectronics.
               </p>
 
-              <p className="italic text-lg text-default-500 dark:text-gray-300 font-medium">
-                &#34;Ascend Beyond Reality&#34;
-              </p>
+
             </div>
 
             {/* Professor Right */}
