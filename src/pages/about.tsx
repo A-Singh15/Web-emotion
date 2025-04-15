@@ -32,8 +32,8 @@ const authors: Author[] = [
     color: "secondary",
     role: "Graduate Research Assistant",
     focus: "Contributed to AI/ML model training and integration.",
-    programming: "Python, C++, MATLAB, TensorFlow, PyTorch",
-    interests: "Deep Learning, HPC, AI Systems",
+    programming: "C++, MATLAB",
+    interests: "Embedded Systems",
   },
   {
     name: "Ratish",
@@ -73,7 +73,7 @@ export default function ProjectShowcase() {
 
   return (
       <DefaultLayout>
-        <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[100vw] h-[100vw] bg-violet-600/10 blur-[120px] rounded-full z-0 pointer-events-none" />
+        <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[100vw] h-[100vw] /10 blur-[120px] rounded-full z-0 pointer-events-none" />
 
         <section className="flex flex-col items-center justify-center gap-10 py-8 md:py-12">
           {/* Professors on far left and right, title in center */}
@@ -86,10 +86,11 @@ export default function ProjectShowcase() {
                 onClick={() => setSelectedAuthor(professors[0])}
             >
               <img
-                  src={professors[0].image}
-                  alt={professors[0].name}
-                  className="w-48 h-48 rounded-xl border-4 border-current shadow-xl object-cover"
+                src={professors[0].image}
+                alt={professors[0].name}
+                className="w-48 h-48 rounded-xl border-4 border-gray-300 dark:border-gray-700 shadow-xl object-cover"
               />
+
               <p className="mt-3 text-lg font-bold">{professors[0].name}</p>
               <p className="text-sm text-default-600 font-medium tracking-wide mt-1">
                 {professors[0].role}
@@ -142,7 +143,7 @@ export default function ProjectShowcase() {
                   <img
                       src={author.image}
                       alt={author.name}
-                      className="w-56 h-56 rounded-xl border-4 border-current shadow-xl object-cover"
+                      className="w-56 h-56 rounded-xl shadow-xl object-cover"
                   />
                   <p className="mt-4 text-xl font-bold">{author.name}</p>
                   <p className="text-base text-default-600 font-medium tracking-wide mt-1">
